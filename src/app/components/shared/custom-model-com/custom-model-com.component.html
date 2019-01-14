@@ -1,0 +1,29 @@
+<div class="ngcm-modal m-hide {{ classlist }}">
+  <!-- <div class="ngcm-modal-body">
+    <ng-content></ng-content>
+  </div> -->
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="ngcm-modal-content">
+      <div class="ngcm-modal-header">
+        <h4 class="ngcm-modal-title">{{ title }}</h4>
+        <button type="button" class="close" (click)="closeModal('close')" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="ngcm-modal-body {{ bodyCenter ? 'text-center' : '' }}">
+
+        <ng-content *ngIf="!preTemplateDialog"></ng-content>
+        <div *ngIf="preTemplateDialog">
+          <p>{{msg}}</p>
+        </div>
+      </div>
+      <div class="ngcm-modal-footer">
+        <p class="ngcm-modal-footer-left-text">{{ footerText }}</p>
+        <button type="button" class="btn btn-danger" (click)="closeModal('close')" *ngIf="closeButton">{{ closeBtnText
+          }}</button>
+        <button type="button" class="btn btn-primary" (click)="closeModal('ok')" [disabled]="!OkEnable">{{ okBtnText }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ngcm-modal-background"></div>

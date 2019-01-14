@@ -1,0 +1,8 @@
+<p>Max ({{imageWidth}},{{imageHeight}})</p>
+<input type="file" #comfileInput style="display:none;" (change)="onFileSelected($event)">
+<button mat-raised-button color="primary" (click)="comfileInput.click()">Pick a File</button>
+<button mat-raised-button color="accent" (click)="onUpload()" *ngIf="selectedFile">Upload</button>
+
+<img [src]="imageSrc" alt="" style="max-width: 200px;max-height: 200px;">
+
+<mat-progress-bar mode="determinate" [value]="uploadPresntage" *ngIf="progressVisible"></mat-progress-bar>

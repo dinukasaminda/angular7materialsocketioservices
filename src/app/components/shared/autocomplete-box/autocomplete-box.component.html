@@ -1,0 +1,24 @@
+<!--
+<mat-form-field appearance="outline" style="width:100% !important">
+  <mat-label>{{PlaceHolder}}</mat-label>
+  <input matInput [matAutocomplete]="auto" [formControl]="fc_autocomplete">
+  <mat-hint class="text-danger" *ngIf="NotAvailableObj">Select Your {{PlaceHolder}} By Search</mat-hint>
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let state of filteredCountries | async" [value]="state.name" (click)="selectChange(state)">
+      {{ state.name }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+
+<div class="form-control-feedback text-danger" *ngIf="(ErrorField || fc_autocomplete.dirty) && fc_autocomplete.invalid">{{ErrorMsg}}:</div>
+  
+
+-->
+<!-- newww
+  <div class="form-group " [ngClass]="(ErrorField || fc_autocomplete.dirty) && fc_autocomplete.invalid? 'has-danger':'' ">
+  <input id="typeahead-focus" type="text" [placeholder]="PlaceHolder" [ngClass]="(ErrorField || fc_autocomplete.dirty) && fc_autocomplete.invalid? 'form-control-danger':''"
+    class="form-control " [formControl]="fc_autocomplete" [(ngModel)]="model" (keyup)="keyupEvent()" [ngbTypeahead]="search"
+    (focus)="focus$.next($event.target.value)" (click)="click$.next($event.target.value)" #instance="ngbTypeahead" />
+
+</div> -->

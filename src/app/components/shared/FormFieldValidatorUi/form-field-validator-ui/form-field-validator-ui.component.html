@@ -1,0 +1,23 @@
+<div *ngIf="myFormControl!=null && myFormControl.invalid && (myFormControl.dirty || myFormControl.touched)" class="alert alert-danger">
+  <div *ngIf="myFormControl.errors.required">
+    {{getRequiredMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.minlength">
+    {{getMinLenMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.maxlength">
+    {{getMaxLenMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.pattern">
+    {{getPatternMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.NotInList">
+    {{getNotInListMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.min">
+    {{getMinMsg()}}
+  </div>
+  <div *ngIf="myFormControl.errors.max">
+    {{getMaxMsg()}}
+  </div>
+</div>
